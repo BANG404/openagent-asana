@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "asana": {
+      "type": "streamable-http",
+      "url": "https://mcp.asana.com/v2/mcp"
+    },
+    "setup": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${PLUGIN_ROOT}/bin/status.mjs"
+      ]
+    }
+  }
+}
