@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "asana",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Asana tasks and projects through the V2 MCP server.",
   "license": "Apache-2.0",
   "homepage": "https://github.com/anthropics/claude-plugins-official/tree/ac996c0dde7fb2a9f805cd5277ffc95ecd44a321/external_plugins/asana",
@@ -15,7 +15,11 @@
         "plugin_protocol": {
           "min": 1,
           "max": 1
-        }
+        },
+        "features": [
+          "configuration-v1",
+          "plugin-oauth-v1"
+        ]
       },
       "capabilities": [
         "skills",
@@ -46,15 +50,48 @@
             "display_name": "asana",
             "description": "Asana tasks and projects through the V2 MCP server.",
             "commands.setup.label": "Setup",
-            "commands.setup.description": "Review connection prerequisites"
+            "commands.setup.description": "Review connection prerequisites",
+            "configuration.client-id.label": "OAuth client ID",
+            "configuration.client-id.description": "Optional registered public client ID; leave blank for dynamic registration.",
+            "configuration.scope.label": "OAuth scope",
+            "configuration.scope.description": "Optional scopes accepted by the provider. Changing this disconnects the existing local authorization."
           },
           "zh": {
             "display_name": "asana",
             "description": "通过 V2 MCP 服务管理 Asana 任务和项目。",
             "commands.setup.label": "配置",
-            "commands.setup.description": "查看连接要求"
+            "commands.setup.description": "查看连接要求",
+            "configuration.client-id.label": "OAuth 客户端 ID",
+            "configuration.client-id.description": "可选的已注册公共客户端 ID；留空时尝试动态注册。",
+            "configuration.scope.label": "OAuth 权限范围",
+            "configuration.scope.description": "可选的服务提供方支持的权限范围；修改后会断开已有的本地授权。"
           }
         }
+      },
+      "configuration": {
+        "version": 1,
+        "fields": [
+          {
+            "key": "client-id",
+            "label": "OAuth client ID",
+            "description": "Optional registered public client ID; leave blank for dynamic registration.",
+            "type": "string",
+            "mcp": {
+              "server": "asana",
+              "property": "oauth_client_id"
+            }
+          },
+          {
+            "key": "scope",
+            "label": "OAuth scope",
+            "description": "Optional scopes accepted by the provider. Changing this disconnects the existing local authorization.",
+            "type": "string",
+            "mcp": {
+              "server": "asana",
+              "property": "oauth_scope"
+            }
+          }
+        ]
       }
     }
   }
