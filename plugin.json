@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "asana",
-  "version": "0.2.0",
-  "description": "Asana tasks and projects through the V2 MCP server.",
+  "version": "0.2.1",
+  "description": "Find and update tasks and projects in Asana; requires an authorized Asana account.",
   "license": "Apache-2.0",
   "homepage": "https://github.com/anthropics/claude-plugins-official/tree/ac996c0dde7fb2a9f805cd5277ffc95ecd44a321/external_plugins/asana",
   "repository": "https://github.com/BANG404/openagent-asana",
@@ -47,8 +47,8 @@
         "default_locale": "en",
         "translations": {
           "en": {
-            "display_name": "asana",
-            "description": "Asana tasks and projects through the V2 MCP server.",
+            "display_name": "Asana Tasks",
+            "description": "Find and update tasks and projects in Asana; requires an authorized Asana account.",
             "commands.setup.label": "Setup",
             "commands.setup.description": "Review connection prerequisites",
             "configuration.client-id.label": "OAuth client ID",
@@ -57,8 +57,8 @@
             "configuration.scope.description": "Optional scopes accepted by the provider. Changing this disconnects the existing local authorization."
           },
           "zh": {
-            "display_name": "asana",
-            "description": "通过 V2 MCP 服务管理 Asana 任务和项目。",
+            "display_name": "Asana 任务管理",
+            "description": "查询和更新 Asana 任务与项目，需要授权 Asana 账号。",
             "commands.setup.label": "配置",
             "commands.setup.description": "查看连接要求",
             "configuration.client-id.label": "OAuth 客户端 ID",

@@ -1,6 +1,6 @@
-# asana for OpenAgent
+# Asana Tasks
 
-Asana tasks and projects through the V2 MCP server.
+Find and update tasks and projects in Asana; requires an authorized Asana account.
 
 Install the release archive through OpenAgent Integrations → Plugins. This is an independent adaptation.
 
@@ -22,6 +22,6 @@ Bundled tests cover immutable artifacts, config conversion and service configura
 
 ## 中文
 
-通过 V2 MCP 服务管理 Asana 任务和项目。 安装发布包后运行 /asana:setup 查看配置要求。凭据和状态保存在当前 OpenAgent 数据目录的 plugin-data/asana/ 下，修改后刷新插件。
+查询和更新 Asana 任务与项目，需要授权 Asana 账号。 安装发布包后运行 /asana:setup 查看配置要求。凭据和状态保存在当前 OpenAgent 数据目录的 plugin-data/asana/ 下，修改后刷新插件。
 
 Upstream source and exact revision are recorded in provenance.json. Bundled source remains available for inspection.
